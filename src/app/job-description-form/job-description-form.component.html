@@ -1,0 +1,84 @@
+<form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="title">Title</label>
+    <input id="title" formControlName="title" />
+    <div >Title is required</div>
+  </div>
+
+  <div>
+    <label for="summary">Summary</label>
+    <textarea id="summary" formControlName="summary"></textarea>
+
+    <div >Summary is required </div>
+    <div>Summary cannot be more than 1000 characters</div>
+
+  </div>
+
+  <div>
+    <label for="responsibilities">Responsibilities</label>
+    <textarea id="responsibilities" formControlName="responsibilities"></textarea>
+    <div>Responsibilities are required</div>
+    <div>Summary cannot be more than 1000 characters</div>
+
+
+  </div>
+
+  <div>
+    <label for="isActiveForCandidates">Is Active For Candidates</label>
+    <input id="isActiveForCandidates" type="checkbox" formControlName="isActiveForCandidates" />
+  </div>
+
+  <div>
+    <label for="requiredSkills">Required Skills</label>
+    <textarea id="requiredSkills" formControlName="requiredSkills"></textarea>
+    <div>Required Skills are optional</div>
+    <div>Required Skills cannot be more than 1000 characters</div>
+  </div>
+
+  <div>
+    <label for="requiredExperience">Required Experience</label>
+    <textarea id="requiredExperience" formControlName="requiredExperience"></textarea>
+    <div>Required Experience are optional</div>
+    <div>Required Experience cannot be more than 1000 characters</div>
+
+  </div>
+
+  <div>
+    <label for="workingConditions">Working Conditions</label>
+    <textarea id="workingConditions" formControlName="workingConditions"></textarea>
+    <div>Working Conditions are optional</div>
+    <div>Working Conditions cannot be more than 500 characters</div>
+
+  </div>
+
+  <div>
+    <label for="benefits">Benefits</label>
+    <input id="benefits" formControlName="benefits" />
+    <div>Benefits are optional</div>
+    <div>Benefits cannot be more than 500 characters</div>
+  </div>
+
+  <div>
+    <label for="recruitmentProcess">Recruitment Process</label>
+    <input id="recruitmentProcess" formControlName="recruitmentProcess" />
+    <div>Recruitment Process are optional</div>
+    <div>Recruitment Process cannot be more than 255 characters</div>
+  </div>
+
+  <div>
+    <label for="companyDescription">Company Description</label>
+    <textarea id="companyDescription" formControlName="companyDescription"></textarea>
+    <div>Company Description  are optional</div>
+    <div>Company Description cannot be more than 500 characters</div>
+
+  </div>
+  <div>
+    <label for="contactEmail">Contact Email</label>
+    <input id="contactEmail" formControlName="contactEmail" type="email" />
+    <div>Contact Email is required</div>
+    <div>Contact Email cannot be more than 255 characters</div>
+    <div >Please enter a valid email</div>
+  </div>
+
+  <button type="submit" [disabled]="jobForm.invalid">Submit</button>
+</form>
