@@ -1,84 +1,79 @@
 <form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
   <div>
-    <label for="title">Title</label>
+    <label for="title">{{ translations.TITLE }}</label>
     <input id="title" formControlName="title" />
-    <div >Title is required</div>
+    <div>{{ translations.REQUIRED }}</div> <!-- Toujours afficher ce message -->
+    <div>{{ translations.MAX_LENGTH }} 255 {{ translations.CHARACTERS }}</div> <!-- Toujours afficher ce message -->
   </div>
 
   <div>
-    <label for="summary">Summary</label>
+    <label for="summary">{{ translations.SUMMARY }}</label>
     <textarea id="summary" formControlName="summary"></textarea>
-
-    <div >Summary is required </div>
-    <div>Summary cannot be more than 1000 characters</div>
-
+    <div>{{ translations.REQUIRED }}</div> <!-- Toujours afficher ce message -->
+    <div>{{ translations.MAX_LENGTH }} 1000 {{ translations.CHARACTERS }}</div> <!-- Toujours afficher ce message -->
   </div>
 
   <div>
-    <label for="responsibilities">Responsibilities</label>
+    <label for="responsibilities">{{ translations.RESPONSIBILITIES }}</label>
     <textarea id="responsibilities" formControlName="responsibilities"></textarea>
-    <div>Responsibilities are required</div>
-    <div>Summary cannot be more than 1000 characters</div>
-
-
+    <div>{{ translations.REQUIRED }}</div> <!-- Toujours afficher ce message -->
+    <div>{{ translations.MAX_LENGTH }} 1000 {{ translations.CHARACTERS }}</div> <!-- Toujours afficher ce message -->
   </div>
 
   <div>
-    <label for="isActiveForCandidates">Is Active For Candidates</label>
+    <label for="isActiveForCandidates">{{ translations.IS_ACTIVE }}</label>
     <input id="isActiveForCandidates" type="checkbox" formControlName="isActiveForCandidates" />
   </div>
 
   <div>
-    <label for="requiredSkills">Required Skills</label>
+    <label for="requiredSkills">{{ translations.REQUIRED_SKILLS }}</label>
     <textarea id="requiredSkills" formControlName="requiredSkills"></textarea>
-    <div>Required Skills are optional</div>
-    <div>Required Skills cannot be more than 1000 characters</div>
+    <div>{{ translations.OPTIONAL }}</div> <!-- Toujours afficher ce message -->
+    <div>{{ translations.MAX_LENGTH }} 1000 {{ translations.CHARACTERS }}</div> <!-- Toujours afficher ce message -->
   </div>
 
   <div>
-    <label for="requiredExperience">Required Experience</label>
+    <label for="requiredExperience">{{ translations.REQUIRED_EXPERIENCE }}</label>
     <textarea id="requiredExperience" formControlName="requiredExperience"></textarea>
-    <div>Required Experience are optional</div>
-    <div>Required Experience cannot be more than 1000 characters</div>
-
+    <div>{{ translations.OPTIONAL }}</div> <!-- Toujours afficher ce message -->
+    <div>{{ translations.MAX_LENGTH }} 1000 {{ translations.CHARACTERS }}</div> <!-- Toujours afficher ce message -->
   </div>
 
   <div>
-    <label for="workingConditions">Working Conditions</label>
+    <label for="workingConditions">{{ translations.WORKING_CONDITIONS }}</label>
     <textarea id="workingConditions" formControlName="workingConditions"></textarea>
-    <div>Working Conditions are optional</div>
-    <div>Working Conditions cannot be more than 500 characters</div>
-
+    <div>{{ translations.OPTIONAL }}</div> <!-- Toujours afficher ce message -->
+    <div>{{ translations.MAX_LENGTH }} 500 {{ translations.CHARACTERS }}</div> <!-- Toujours afficher ce message -->
   </div>
 
   <div>
-    <label for="benefits">Benefits</label>
+    <label for="benefits">{{ translations.BENEFITS }}</label>
     <input id="benefits" formControlName="benefits" />
-    <div>Benefits are optional</div>
-    <div>Benefits cannot be more than 500 characters</div>
+    <div>{{ translations.OPTIONAL }}</div> <!-- Toujours afficher ce message -->
+    <div>{{ translations.MAX_LENGTH }} 500 {{ translations.CHARACTERS }}</div> <!-- Toujours afficher ce message -->
   </div>
 
   <div>
-    <label for="recruitmentProcess">Recruitment Process</label>
+    <label for="recruitmentProcess">{{ translations.RECRUITMENT_PROCESS }}</label>
     <input id="recruitmentProcess" formControlName="recruitmentProcess" />
-    <div>Recruitment Process are optional</div>
-    <div>Recruitment Process cannot be more than 255 characters</div>
+    <div>{{ translations.OPTIONAL }}</div> <!-- Toujours afficher ce message -->
+    <div>{{ translations.MAX_LENGTH }} 255 {{ translations.CHARACTERS }}</div> <!-- Toujours afficher ce message -->
   </div>
 
   <div>
-    <label for="companyDescription">Company Description</label>
+    <label for="companyDescription">{{ translations.COMPANY_DESCRIPTION }}</label>
     <textarea id="companyDescription" formControlName="companyDescription"></textarea>
-    <div>Company Description  are optional</div>
-    <div>Company Description cannot be more than 500 characters</div>
-
+    <div>{{ translations.OPTIONAL }}</div> <!-- Toujours afficher ce message -->
+    <div>{{ translations.MAX_LENGTH }} 500 {{ translations.CHARACTERS }}</div> <!-- Toujours afficher ce message -->
   </div>
+
   <div>
-    <label for="contactEmail">Contact Email</label>
+    <label for="contactEmail">{{ translations.CONTACT_EMAIL }}</label>
     <input id="contactEmail" formControlName="contactEmail" type="email" />
-    <div>Contact Email is required</div>
-    <div>Contact Email cannot be more than 255 characters</div>
-    <div >Please enter a valid email</div>
+    <div>{{ translations.REQUIRED }}</div> <!-- Toujours afficher ce message -->
+    <div>{{ translations.MAX_LENGTH }} 255 {{ translations.CHARACTERS }}</div> <!-- Toujours afficher ce message -->
+    <div>{{ translations.INVALID_EMAIL }}</div> <!-- Toujours afficher ce message -->
   </div>
 
-  <button type="submit" [disabled]="jobForm.invalid">Submit</button>
+  <button type="submit" [disabled]="jobForm.invalid">{{ translations.SUBMIT }}</button>
 </form>

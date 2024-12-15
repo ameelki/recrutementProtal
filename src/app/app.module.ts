@@ -11,6 +11,8 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 import { AppComponent } from './app.component';  // Votre composant racine
 import { JobDescriptionFormComponent } from './job-description-form/job-description-form.component'; // Votre formulaire
 import { routes } from './app.routes';  // Si vous avez des routes à définir
+ 
+
 
 @NgModule({
   declarations: [

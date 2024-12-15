@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class JobDescriptionService {
 
-  private apiUrl = 'http://localhost:8091/api/job-descriptions';  // Remplacez par votre URL d'API
+  private apiUrl = 'http://141.145.217.37:8082/api/job-descriptions';  // Remplacez par votre URL d'API
 
   constructor(private http: HttpClient) { }
 
