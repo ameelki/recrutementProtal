@@ -8,9 +8,12 @@
     <div class="box">
       <div class="group">
         <div class="desktop">
+          <!-- Titre du formulaire -->
+
           <!-- Red triangles (as in your design) -->
           <div class="overlap">
             <div class="rectangle"></div>
+            
             <div class="div"></div>
             <div class="rectangle-2"></div>
             <div class="rectangle-3"></div>
@@ -18,6 +21,10 @@
 
           <!-- Formulaire avec les contrôles Angular -->
           <form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
+            <div class="title">
+            <div >Job Description Form :</div>
+
+            </div>
             <div class="overlap-group">
               <input formControlName="title" type="text" placeholder="Job Title*" />
             </div>
