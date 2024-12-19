@@ -1,0 +1,233 @@
+/* Importation de Meyer Reset */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: flex;
+  justify-content: center;   /* Centre horizontalement */
+  align-items: center;       /* Centre verticalement */
+  height: 100vh;             /* Prend toute la hauteur de la fenêtre */
+  margin: 0;                 /* Retire les marges par défaut du navigateur */
+  background-color: #f4f4f4; /* Fond doux pour la page */
+}
+
+/* Style générique pour le focus des boutons */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* La boîte que tu veux centrer */
+.box {
+  width: 1440px;
+  height: 1024px;
+  background-color: #fff; /* Fond blanc pour la boîte */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  border-radius: 10px; /* Coins arrondis */
+  position: relative; /* Position relative pour centrer */
+}
+
+/* Conteneur pour les éléments à l'intérieur */
+.box .group {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+}
+
+/* Centrage du contenu dans la boîte */
+.box .desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 1024px;
+  background-color: #ffffff;
+}
+
+/* Positionnement absolu des éléments internes */
+.box .overlap {
+  position: absolute;
+  width: 624px;
+  height: 899px;
+  top: 40x;
+  left: 816px;
+}
+
+.box .rectangle,
+.box .rectangle-2,
+.box .rectangle-3 {
+  position: absolute;
+  width: 513px;
+  height: 899px;
+  top: 0;
+  left: 111px;
+  background-color: #ff0000;
+}
+
+.box .div,
+.box .rectangle-2,
+.box .rectangle-3 {
+  position: absolute;
+  width: 156px;
+  height: 156px;
+  background-color: #ff0000;
+  border-radius: 30px;
+  transform: rotate(-45deg);
+}
+
+.box .rectangle-2 {
+  top: 371px;
+  left: 32px;
+  border-radius: 40px;
+}
+
+.box .rectangle-3 {
+  top: 670px;
+  left: 32px;
+  border-radius: 35px;
+}
+
+/* Champs de saisie (input, textarea) */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  height: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #000;
+  border-radius: 27.5px;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin: 0; /* Enlève les marges par défaut */
+}
+
+/* Positionnement des champs de saisie */
+.box .overlap-group,
+.box .div-wrapper,
+.box .overlap-2,
+.box .overlap-3,
+.box .overlap-4,
+.box .overlap-5,
+.box .overlap-6,
+.box .overlap-7 {
+  position: absolute;
+  width: 703px;
+  height: 60px;
+  left: 91px;
+  border-radius: 27.5px;
+  border: 1px solid #000000;
+}
+
+/* Ajuster le top des éléments pour réduire l'espace entre eux */
+.box .overlap-group {
+  top: 200px;
+}
+
+.box .div-wrapper {
+  top: 270px;
+  height: 150px;
+}
+
+.box .overlap-2 {
+  top: 440px;
+}
+
+.box .overlap-3 {
+  top: 510px;
+}
+
+.box .overlap-4 {
+  top: 580px;
+}
+
+.box .overlap-5 {
+  top: 650px;
+}
+
+.box .overlap-6 {
+  top: 720px;
+}
+
+.box .overlap-7 {
+  top: 790px;
+}
+
+/* Nouveau champ de description */
+.box .description-wrapper textarea {
+  border: none;
+  height: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 27.5px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Style du bouton de soumission - Retirer le rectangle autour */
+.box .overlap-9 {
+  position: absolute;
+  width: 300px;
+  height: 55px;
+  top: 920px; /* Place le bouton plus bas, plus proche des champs */
+  left: 338px;
+  background-color: #ef1010; /* Fond rose pour le bouton */
+  border-radius: 27.5px;
+  box-shadow: 4px 4px 10px 2px #06000040;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Agrandir la taille de l'écriture à l'intérieur du bouton */
+  font-size: 20px;  /* Taille de la police */
+  color: white;  /* Couleur du texte */
+  font-weight: bold;  /* Écrire en gras, si souhaité */
+}
+
+/* Texte à l'intérieur du bouton */
+.box .text-wrapper-5 {
+  font-family: "DM Serif Text-Regular", Helvetica;
+  font-weight: 400;
+  color: #00000099;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+/* Image dans la boîte */
+.box .image {
+  position: absolute;
+  width: 97px;
+  height: 96px;
+  top: 10px;
+  left: 43px;
+  object-fit: cover;
+}
+
+/* Style de la case à cocher */
+.checkbox-wrapper {
+  position: absolute;
+  width: 703px;
+  height: 55px;
+  top: 870px; /* Place la case juste avant le bouton */
+  left: 91px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #000;
+}
+
+.checkbox-wrapper input {
+  margin-right: 10px;
+}

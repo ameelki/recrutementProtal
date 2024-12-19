@@ -9,15 +9,17 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, RouterOutlet } from '@angular/router';
 
 import { AppComponent } from './app.component';  // Votre composant racine
-import { JobDescriptionFormComponent } from './job-description-form/job-description-form.component'; // Votre formulaire
 import { routes } from './app.routes';  // Si vous avez des routes à définir
+import LoginComponent from './authentication/login/login.component';
+import { HeaderComponent } from './header/header.component';
  
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    JobDescriptionFormComponent,  // Déclarez votre composant dans le module
+    HeaderComponent,
+    LoginComponent // Déclarez votre composant dans le module
   ],
   imports: [
     BrowserModule,

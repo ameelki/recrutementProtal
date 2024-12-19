@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="group">
+        <div class="desktop">
+          <!-- Red triangles (as in your design) -->
+          <div class="overlap">
+            <div class="rectangle"></div>
+            <div class="div"></div>
+            <div class="rectangle-2"></div>
+            <div class="rectangle-3"></div>
+          </div>
+
+          <!-- Formulaire avec les contrôles Angular -->
+          <form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
+            <div class="overlap-group">
+              <input formControlName="title" type="text" placeholder="Job Title*" />
+            </div>
+            <div class="div-wrapper">
+              <input formControlName="summary" type="text" placeholder="Job Summary*" />
+            </div>
+            <div class="overlap-2">
+              <input formControlName="responsibilities" type="text" placeholder="Responsibilities*" />
+            </div>
+            <div class="overlap-3">
+              <input formControlName="requiredSkills" type="text" placeholder="Required Skills*" />
+            </div>
+            <div class="overlap-4">
+              <input formControlName="requiredExperience" type="text" placeholder="Required Experience*" />
+            </div>
+            <div class="overlap-5">
+              <input formControlName="workingConditions" type="text" placeholder="Working Conditions*" />
+            </div>
+            <div class="overlap-6">
+              <input formControlName="companyDescription" type="text" placeholder="Company Description*" />
+            </div>
+            <div class="overlap-7">
+              <input formControlName="contactEmail" type="email" placeholder="Contact Email*" />
+            </div>
+
+            <!-- Description field (textarea) added -->
+            
+
+            <!-- Is Active for Candidates Checkbox (above the Submit button) -->
+            <div class="checkbox-wrapper">
+              <label for="active-for-candidates">
+                <input formControlName="isActiveForCandidates" type="checkbox" />
+                Is active for candidates
+              </label>
+            </div>
+
+            <!-- Submit button (above the checkbox) -->
+            <button class="overlap-9" type="submit" [disabled]="!jobForm.valid">Submit</button>
+
+            <!-- Logo -->
+            <img class="image" src="/assets/images/logo.jpg" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

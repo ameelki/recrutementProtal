@@ -1,5 +1,11 @@
 import { Routes } from '@angular/router';
-import { JobDescriptionFormComponent } from './job-description-form/job-description-form.component';
+import LoginComponent from './authentication/login/login.component';
+import RegisterComponent from './authentication/register/register.component';
+import { JobPostingFormComponent } from './job-posting/job-posting-form/job-posting-form.component';
 
 export const routes: Routes = [
-    { path: ':lang/create-job', component: JobDescriptionFormComponent }  ];
+    { path: 'login', component: LoginComponent } ,
+    { path: 'register', component: RegisterComponent } ,
+    { path: 'create-job', component: JobPostingFormComponent } 
+    
+    ];

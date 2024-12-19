@@ -1,0 +1,18 @@
+<header class="app-header">
+    <nav>
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <!-- Ajouter d'autres liens si nécessaire -->
+      </ul>
+      <div class="language-selector">
+        <label for="language">Language:</label>
+        <select id="language" (change)="onLanguageChange($event)">
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="es">Español</option>
+          <!-- Ajoutez plus de langues si nécessaire -->
+        </select>
+      </div>
+    </nav>
+  </header>

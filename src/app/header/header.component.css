@@ -1,0 +1,33 @@
+/* header.component.css */
+.app-header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .language-selector {
+    margin-left: auto;
+  }
+  
+  .language-selector label {
+    margin-right: 10px;
+    color: white;
+  }
+  
