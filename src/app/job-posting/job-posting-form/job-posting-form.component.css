@@ -70,7 +70,7 @@ a {
   height: 899px;
   top: 0;
   left: 111px;
-  background-color: #ff0000;
+  background-color: #B4000D;
 }
 
 .box .div,
@@ -79,7 +79,7 @@ a {
   position: absolute;
   width: 156px;
   height: 156px;
-  background-color: #ff0000;
+  background-color:#B4000D;
   border-radius: 30px;
   transform: rotate(-45deg);
 }
@@ -181,7 +181,7 @@ textarea {
   height: 55px;
   top: 920px; /* Place le bouton plus bas, plus proche des champs */
   left: 338px;
-  background-color: #ef1010; /* Fond rose pour le bouton */
+  background-color: #F48C94; /* Fond rose pour le bouton */
   border-radius: 27.5px;
   box-shadow: 4px 4px 10px 2px #06000040;
   display: flex;
